@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=4 uid="uid://bjqd3oog4ffqn"]
+
+[ext_resource type="Script" path="res://Scripts/tesseract.gd" id="1_3dpim"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_srbb2"]
+_surfaces = [{
+"aabb": AABB(-0.142857, -0.142857, -0.142857, 0.285714, 0.285714, 0.285714),
+"format": 34359742465,
+"index_count": 64,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAQABEAEgATABQAFQAWABcAGAAZABoAGwAcAB0AHgAfACAAIQAiACMAJAAlACYAJwAoACkAKgArACwALQAuAC8AMAAxADIAMwA0ADUANgA3ADgAOQA6ADsAPAA9AD4APwA="),
+"primitive": 1,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 64,
+"vertex_data": PackedByteArray("OY7jvTmO4705juO9OY7jPTmO4705juO9OY7jvTmO4705juO9OY7jvTmO4z05juO9OY7jvTmO4705juO9OY7jvTmO4705juM9OY7jvTmO4705juO9JUkSviVJEr4lSRK+OY7jPTmO4705juO9OY7jPTmO4z05juO9OY7jPTmO4705juO9OY7jPTmO4705juM9OY7jPTmO4705juO9JUkSPiVJEr4lSRK+OY7jvTmO4z05juO9OY7jPTmO4z05juO9OY7jvTmO4z05juO9OY7jvTmO4z05juM9OY7jvTmO4z05juO9JUkSviVJEj4lSRK+OY7jPTmO4z05juO9OY7jPTmO4z05juM9OY7jPTmO4z05juO9JUkSPiVJEj4lSRK+OY7jvTmO4705juM9OY7jPTmO4705juM9OY7jvTmO4705juM9OY7jvTmO4z05juM9OY7jvTmO4705juM9JUkSviVJEr4lSRI+OY7jPTmO4705juM9OY7jPTmO4z05juM9OY7jPTmO4705juM9JUkSPiVJEr4lSRI+OY7jvTmO4z05juM9OY7jPTmO4z05juM9OY7jvTmO4z05juM9JUkSviVJEj4lSRI+OY7jPTmO4z05juM9JUkSPiVJEj4lSRI+JUkSviVJEr4lSRK+JUkSPiVJEr4lSRK+JUkSviVJEr4lSRK+JUkSviVJEj4lSRK+JUkSviVJEr4lSRK+JUkSviVJEr4lSRI+JUkSPiVJEr4lSRK+JUkSPiVJEj4lSRK+JUkSPiVJEr4lSRK+JUkSPiVJEr4lSRI+JUkSviVJEj4lSRK+JUkSPiVJEj4lSRK+JUkSviVJEj4lSRK+JUkSviVJEj4lSRI+JUkSPiVJEj4lSRK+JUkSPiVJEj4lSRI+JUkSviVJEr4lSRI+JUkSPiVJEr4lSRI+JUkSviVJEr4lSRI+JUkSviVJEj4lSRI+JUkSPiVJEr4lSRI+JUkSPiVJEj4lSRI+JUkSviVJEj4lSRI+JUkSPiVJEj4lSRI+")
+}]
+
+[sub_resource type="Environment" id="Environment_4hjak"]
+
+[node name="3D_World" type="Node3D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 6.0
+offset_right = 192.0
+offset_bottom = 49.0
+text = "use 'Q', 'W', 'E', 'R', 'T', 'Y'
+to rotate the tesseract
+
+and 'left_click' to toggle
+rotation direction"
+
+[node name="Tesseract" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_srbb2")
+script = ExtResource("1_3dpim")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.430511, -0.141195, 0.891473, 0, 0.987688, 0.156434, -0.902585, 0.0673468, -0.425211, 0.428, 0.06, -0.22)
+environment = SubResource("Environment_4hjak")
